@@ -1,0 +1,9 @@
+.conversationScrollBar::-webkit-scrollbar {
+    background-color: lightgrey;
+    width: 8px;
+}
+
+.conversationScrollBar::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: .7em;
+}

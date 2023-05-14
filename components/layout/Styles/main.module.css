@@ -1,0 +1,9 @@
+.backBtn {
+    transform: scale(.7);
+    transition: .25s linear all;
+}
+
+.backBtn:active {
+    transform: scale(1);
+}
+
