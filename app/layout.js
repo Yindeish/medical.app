@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -16,13 +16,18 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={[inter.className, 'w-full h-[auto]']}>
+      <body className={inter.className}>
         <ChakraProvider>
-          <Flex bgColor={'#749D1C'} p={3} gap={'1em'} w={'full'} style={{ height: '100%', borderRadius: '3em' }}>
-            <SideNav styles={{ margin: '1em' }} />
-            <Box w={'full'} bgColor={'#F7F7F7'} p={'1em'} px={'2em'} style={{ borderRadius: '3em' }}>
+          <Flex 
+          bgColor={'#749D1C'} 
+          py={[1, 1, 3]} px={[ 1, 1, 3]} gap={'1em'} w={'full'} 
+          style={{ height: '100%' }}
+          borderRadius={[10, ,30]}
+          flexDir={['column', 'column', 'row']}>
+            <SideNav  />
+            <Box w={'full'} bgColor={'#F7F7F7'} p={['.5em', '.8em', '1em']} px={['.2em',,'2em']} borderRadius={[10, ,30]} overflow={'hidden'}>
               <TopNav />
-              <Heading>Welcome <Text as={'bold'} color={'#749D1C'}>Dr. Amzat!</Text></Heading>
+              <Heading fontSize={['md', '2xl', '3xl']}>Welcome <Text as={'bold'} color={'#749D1C'}>Dr. Amzat!</Text></Heading>
               <main className='w-full pt-3'>
                 {children}
               </main>

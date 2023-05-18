@@ -1,4 +1,4 @@
-.messagesWrapper::-webkit-scrollbar {
+/* .messagesWrapper::-webkit-scrollbar {
     width: 8px;
     background-color: lightgrey;
     border-radius: .5em;
@@ -7,4 +7,4 @@
 .messagesWrapper::-webkit-scrollbar-thumb {
     border-radius: .5em;
     background-color: grey;
-}
+} */

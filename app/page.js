@@ -14,12 +14,29 @@ export default function Home() {
   return (
     <>
       <Grid
-        templateAreas={`"tasks tasks conversations"
+        templateAreas={[
+          `
+          "tasks"
+          "conversations"
+          "calender"
+          "read"
+          "statistics"
+          "images"
+          "patients"
+          "updates"
+          `,
+          `
+          "tasks calender"
+          "conversations read"
+          "statistics images"
+          "patients updates"
+          `,
+          `"tasks tasks conversations"
                         "calender read statistics"
                         ". images  ."
-                        "updates images patients"`}
-        gridTemplateColumns={'1fr 1fr 2fr'}
-        gridTemplateRows={'33vh 35vh 5px 16vh'}
+                        "updates images patients"`]}
+        gridTemplateColumns={['100%', '2fr 1fr', '1fr 1fr 2fr']}
+        gridTemplateRows={['auto auto auto auto auto auto auto auto', 'auto auto auto auto', '33vh 35vh 5px 16vh']}
         w={'100%'}
         h='fit-content'
         gap='3'

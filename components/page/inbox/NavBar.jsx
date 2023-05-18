@@ -1,6 +1,6 @@
 "use client";
 
-import { ButtonGroup, Text, Flex } from "@chakra-ui/react"
+import { ButtonGroup, Text, Flex, Box } from "@chakra-ui/react"
 import Edit from "@/components/icons/Edit";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -38,17 +38,18 @@ const NavBar = () => {
 
   return (
     <>
-        <ButtonGroup w={'full'} bg={'#749D1C'} borderRadius={3} p={2}>
-            <Edit width={'25px'} height={'25px'}/> <Text size={'sm'} fontWeight={'medium'} className="pl-2 text-white text-bold">compose</Text>
+        <ButtonGroup w={['fit-content', ,'full']} bg={'#749D1C'} borderRadius={3} p={[1,1,2]} display={'flex'} alignItems={'center'} justifyContent={'center'}>
+            <Box w={['12px', '20px','25px']} h={['12px', '20px','25px']}><Edit width={'100%'} height={'100%'}/></Box> <Text fontSize={['xs', 'sm', 'md']} fontWeight={'medium'} pl={[1,2,2]} className="text-white text-bold">compose</Text>
         </ButtonGroup>
-        <Flex w={'full'} h={'fit-content'} flexDir={'column'} gap={3} mt={3}>
+        <Flex w={'full'} h={'fit-content'} flexDir={['row', 'column', 'column']} gap={[1,,3]} mt={3}>
             {navItems.map(navItem => (
                 <Text
                 onClick={() => navigateTo(navItem.link)}
                 color={'#749D1C'}
                 w={'full'}
                 fontWeight={"medium"}
-                fontSize={"md"}
+                fontSize={['xs', 'sm', "md"]}
+                textAlign={['center', 'left', 'left']}
                 p={2}
                 cursor={'pointer'}
                 _hover={{

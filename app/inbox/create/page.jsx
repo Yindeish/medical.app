@@ -8,7 +8,7 @@ const page = () => {
   return (
     <>
         <Grid
-        gridTemplateColumns={'10% 90%'}
+        gridTemplateColumns={[, '15% 85%','10% 90%']}
         gridTemplateRows={'100%'}
         w={'100%'}
         h='78vh'

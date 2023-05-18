@@ -34,8 +34,8 @@ const Tasks = () => {
     >
         <GridItem pl='2' bg={'transparent'} borderRadius={'1em'} area={'header'}>
           <Flex gap={3} pb={2}>
-            <Heading size={'md'} className='text-white'>Recently Assigned Tasks</Heading>
-            <Button variant={'solid'} shadow={'base'} bg={'white'} color={'#749D1C'} p={1}>62</Button>
+            <Heading size={['xs', 'sm','md']} className='text-white'>Recently Assigned Tasks</Heading>
+            <Button variant={'solid'} shadow={'base'} bg={'white'} color={'#749D1C'} p={[0.2, 0.5,1]} fontSize={['xs', 'sm','md']}>62</Button>
           </Flex>
         </GridItem>
         <GridItem pl='2' bg={'transparent'} borderRadius={'1em'} area={'image'}>
@@ -46,10 +46,10 @@ const Tasks = () => {
           <Flex flexDir={'column'} gap={2} align={'flex-start'}>
             {taskItems.map(taskItem => (
                 <Flex w={'full'} gap={3} p={1} bg={'white'} borderRadius={'lg'} justify={'flex-start'} align={'center'}>
-                    <Avatar size={'sm'} name={taskItem.name.substring(0)} />
+                    <Avatar size={['2xs','xs', 'sm']} name={taskItem.name.substring(0)} />
                     <Flex flexDir={'column'} justify={'center'} align={'flex-start'}>
-                        <Heading size={'sm'}>{taskItem.name}</Heading>
-                        <Flex fontWeight={'normal'} fontSize={'sm'} color={'gray.400'}>{taskItem.date} | {taskItem.time}</Flex>
+                        <Heading fontSize={['xs', 'sm','md']}>{taskItem.name}</Heading>
+                        <Flex fontWeight={'normal'} fontSize={['xx-small', 'xs','sm']} color={'gray.400'}>{taskItem.date} | {taskItem.time}</Flex>
                     </Flex>
                 </Flex>
             ))}

@@ -30,15 +30,15 @@ const Conversations = () => {
 
   return (
     <>
-        <Heading size={'md'} color={'black'}>Recent Conversations</Heading>
-        <Flex w={'60%'} maxH={'28vh'} className={styles.conversationScrollBar} flexDir={'column'} gap={2} align={'flex-start'} overflowY={"scroll"}>
+        <Heading fontSize={['xs', 'sm','md']} color={'black'}>Recent Conversations</Heading>
+        <Flex w={[ '85%',,'60%']} maxH={'28vh'} className={styles.conversationScrollBar} flexDir={'column'} gap={2} align={'flex-start'} overflowY={"scroll"}>
             {conversationItems.map(conversationItem => (
                 <Flex w={'full'} gap={3} p={1} bg={'white'} borderRadius={'lg'} justify={'space-between'} align={'center'}>
-                    <Avatar  size={'sm'} name={conversationItem.name.substring(0)}/>
+                    <Avatar  size={['2xs','xs', 'sm']} name={conversationItem.name.substring(0)}/>
                     <Flex h={'full'} align={"center"} justify={'space-between'} flex={'0.97'}>
                         <Flex flexDir={'column'}>
-                            <Heading size={'sm'}>{conversationItem.name}</Heading>
-                            <Flex fontWeight={'normal'} fontSize={'sm'} color={'gray.400'}>{conversationItem.date} | {conversationItem.time}</Flex>
+                            <Heading fontSize={['xs', 'sm','md']}>{conversationItem.name}</Heading>
+                            <Flex fontWeight={'normal'} fontSize={['xx-small', 'xs','sm']} color={'gray.400'}>{conversationItem.date} | {conversationItem.time}</Flex>
                         </Flex>
                         <Box>
                             <Options />

@@ -69,22 +69,24 @@ const Messages = () => {
   return (
     <Box bg={'white'} w={'full'} h={'100%'} p={3} px={5}>
         <Flex py={6} borderBottom={'3px solid #749D1C'} w={'full'} h={'fit-content'} justify={'space-between'} align={'center'}>
-            <Input w={2} h={7}  type="checkbox" size={"md"} border={'2px solid #749D1C'} />
+            <Input w={[1,1,2]} h={[2,2,7]}  type="checkbox" size={"md"} border={'2px solid #749D1C'} />
             <Flex w={'fit-content'} h={'full'} justify={'space-between'} align={'center'}>
-                <InputGroup w={'25em'} style={{ flex: .6 }} className='rounded-md' h={'35px'} bgColor={'#F7F7F7'}>
-                    <InputLeftElement h={'100%'}
-                        pointerEvents="none"
-                        children={<Search />}
-                        size="xs"
-                    />
-                    <Input h={'100%'}
-                        style={{ borderRadius: '1em' }}
-                        type='search'
-                        variant="outline"
-                        size="xs"
-                        placeholder='Search'
-                    />
-                </InputGroup>
+            <InputGroup flex={[0.9,,0.6]} className='rounded-md' h={'100%'} bgColor={'gray.200'}>
+                <InputLeftElement display={'flex'} alignItems={'center'} justifyContent={'flex-start'} 
+                w={'fit-content'} h={'100%'}
+                    pointerEvents="none"
+                    children={<Box w={['15px', '30px', '30px']} h={['15px', '30px', '30px']}><Search width= {'100%'} height={'100%'} /></Box>}
+                    size={['xs', 'sm', 'md']}
+                />
+                <Input pl={['15px', '30px', '30px']} h={'100%'}
+                flex={0.999}
+                    style={{ borderRadius: '1em' }}
+                    type='search'
+                    variant="outline"
+                    size="xs"
+                    placeholder='Search'
+                />
+            </InputGroup>
                 <Filter />
                 <LeftChevron />
                 <RightChevron />
@@ -94,16 +96,16 @@ const Messages = () => {
         <Flex className={Styles.messagesWrapper} flexDir={'column'} gap={2} overflowY={'scroll'} mt={4} w={'full'} h={'62vh'} pr={'1em'}>
             { people.map(person => (
                 <Flex align={'center'} justify={'space-between'} gap={'2em'} w={'full'} h={'fit-content'}>
-                    <Input w={2} h={7}  type="checkbox" size={"md"} border={'2px solid #749D1C'} />
-                    <Flex  w={'full'} h={'full'} align={'center'} gap={'4em'}>
+                    <Input w={[, '0.5px', 2]} h={[, '30px', 7]}  type="checkbox" border={'2px solid #749D1C'} />
+                    <Flex flex={[, 0.99, 0.95]}  w={'full'} h={'full'} align={'center'} gap={[, '1em', '4em']}>
                         <Avatar size={'sm'} />
-                        <Flex bg={'#F7F7F7'} borderRadius={'1em'} align={'center'} gap={'3em'} w={'full'} py={3} px={5}>
+                        <Flex flex={0.99} bg={'#F7F7F7'} borderRadius={'1em'} align={'center'} gap={[, '0.5em','3em']} w={'full'} py={[, 1, 3]} px={[, 3, 5]}>
                             <Flex borderRight={'4px solid #749D1C'} w={'40%'} flexDir={'column'} gap={0.5}>
                                 <Text fontWeight={'bold'} textAlign={'left'} w={'full'} fontSize={'sm'}>{person.name}</Text>
                                 <Text color={'gray.600'} textAlign={'left'} w={'full'} fontSize={'xs'}>{person.date} | {person.time}</Text>
                             </Flex>
-                            <Flex h={'full'} w={'60%'} align={'center'} justify={'space-between'}>
-                                <Text color={'gray.800'}  fontWeight={'bold'}>{person.message} - <span className="text-xs" style={{ color: 'grey'}}>{person.appendix}</span></Text>
+                            <Flex flex={0.99} h={'full'} w={'60%'} align={'center'} justify={'space-between'}>
+                                <Text flex={[, 0.75, 0.9]} lineHeight={[, '3', ]} color={'gray.800'}  fontWeight={'bold'}>{person.message} - <span className="text-xs" style={{ color: 'grey'}}>{person.appendix}</span></Text>
                                 <Options />
                             </Flex>
                         </Flex>
