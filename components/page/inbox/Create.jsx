@@ -6,7 +6,7 @@ const Create = () => {
 
   return (
     <Flex bg={'#F7F7F7'} w={'full'} h={'full'} align={'center'} justify={'center'}>
-        <Flex w={[, '90%', '45%']} h={'fit-content'} flexDir={'column'} borderRadius={'1em'}>
+        <Flex w={['98%', '90%', '45%']} h={'fit-content'} flexDir={'column'} borderRadius={'1em'}>
 
             <Flex w={'full'} h={'75px'} bg={'#749D1C'} flexDir={'column'} align={'center'} justify={'center'} gap={1} borderTopRadius={'1em'}>
                 <Heading fontSize={'lg'} color={'white'}>Create new task</Heading>
@@ -14,10 +14,8 @@ const Create = () => {
             </Flex>
 
             <Grid w={'full'}
-            // gridTemplateColumns={[, '1fr', '1fr 1fr']} 
-            gridTemplateColumns={'1fr 1fr'} 
-            // gridTemplateRows={[, 'auto auto auto auto', 'auto auto']}
-            gridTemplateRows={'auto auto'}
+            gridTemplateColumns={['1fr', '1fr', '1fr 1fr']} 
+            gridTemplateRows={['auto auto auto auto', 'auto auto auto auto', 'auto auto']}
             gap={2} p={3} pb={'2.5em'}
             placeContent={'center'}
             position={'relative'}>

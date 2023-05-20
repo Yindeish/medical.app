@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
             <SideNav  />
             <Box w={'full'} bgColor={'#F7F7F7'} p={['.5em', '.8em', '1em']} px={['.2em',,'2em']} borderRadius={[10, ,30]} overflow={'hidden'}>
               <TopNav />
-              <Heading fontSize={['md', '2xl', '3xl']}>Welcome <Text as={'bold'} color={'#749D1C'}>Dr. Amzat!</Text></Heading>
+              <Heading my={[2,3,4]} fontSize={['md', '2xl', '3xl']}>Welcome <Text as={'bold'} color={'#749D1C'}>Dr. Amzat!</Text></Heading>
               <main className='w-full pt-3'>
                 {children}
               </main>
