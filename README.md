@@ -1,5 +1,4 @@
-#This project was created the latest version of Next js 13
-#Let's go live ✨https://trendy-trade.vercel.app/
+#Let's go live ✨medical-app-ashy.vercel.app
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
