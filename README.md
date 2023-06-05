@@ -1,4 +1,4 @@
-#Let's go live ✨ <a href="medical-app-ashy.vercel.app" target="_blank">medical-app-ashy.vercel.app</a>
+#Let's go live ✨ <a href="https://medical-app-ashy.vercel.app" target="_blank">medical-app-ashy.vercel.app</a>
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
