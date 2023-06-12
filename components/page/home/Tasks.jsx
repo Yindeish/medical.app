@@ -1,4 +1,4 @@
-import {  Grid, GridItem, Flex, Button, Heading, Avatar, Text } from '@chakra-ui/react';
+import {  Grid, GridItem, Flex, Button, Heading, Avatar, Text, Image } from '@chakra-ui/react';
 
 const Tasks = () => {
 
@@ -21,14 +21,20 @@ const Tasks = () => {
     ];
   return (
     <Grid
-    templateAreas={`"header image"
-                    "tasksWrapper image"`}
-        gridTemplateColumns={'1.5fr 1fr'}
-        gridTemplateRows={'30px auto'}
+    templateAreas={[
+      `"header image"
+      "tasksWrapper image"`, 
+       `'header header'
+        'tasksWrapper image'
+        'tasksWrapper image'
+       `           
+    ]}
+        gridTemplateColumns={['1.5fr 1fr', 'repeat(2, 1fr)']}
+        gridTemplateRows={['minmax(30px, 40px) auto', '40px auto 50px']}
         h='100%'
         w={'full'}
         bg={'transparent'}
-        gap='3'
+        gap={['1', '2', '3']}
         color='blackAlpha.700'
         fontWeight='bold'
     >
@@ -39,13 +45,13 @@ const Tasks = () => {
           </Flex>
         </GridItem>
         <GridItem pl='2' bg={'transparent'} borderRadius={'1em'} area={'image'}>
-          Image
+          <Image w={'100%'} h={'100%'} objectFit={'cover'} objectPosition={'center'} src='../../../public/images/unsplash_279xIHymPYY.png' />
         </GridItem>
         <GridItem pl='2' bg={'transparent'} borderRadius={'1em'} area={'tasksWrapper'}>
             <Text textAlign={'end'} color={'white'} fontWeight={'normal'} textDecor={'underline'}>View All</Text>
-          <Flex flexDir={'column'} gap={2} align={'flex-start'}>
+          <Flex flexDir={'column'} gap={['1', '2']} align={'flex-start'} maxH={'28vh'} overflowY={"scroll"}>
             {taskItems.map(taskItem => (
-                <Flex w={'full'} gap={3} p={1} bg={'white'} borderRadius={'lg'} justify={'flex-start'} align={'center'}>
+                <Flex w={'full'} gap={['1', '2', '3']} p={1} bg={'white'} borderRadius={['sm', 'lg']} justify={'flex-start'} align={'center'}>
                     <Avatar size={['2xs','xs', 'sm']} name={taskItem.name.substring(0)} />
                     <Flex flexDir={'column'} justify={'center'} align={'flex-start'}>
                         <Heading fontSize={['xs', 'sm','md']}>{taskItem.name}</Heading>
